@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-
+import { CustomerProvider } from '../../providers/customer/customer';
+import { CustomerdetailPage } from '../customerdetail/customerdetail';
 /**
  * Generated class for the Menu01Page page.
  *
@@ -14,12 +15,15 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
   templateUrl: 'menu01.html',
 })
 export class Menu01Page {
-
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+ allcutomers:any=0;
+  constructor(public navCtrl: NavController, public navParams: NavParams, public data:CustomerProvider) {
+    this.data.loadAll().then(result=>{this.allcutomers=result});
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad Menu01Page');
   }
-
+  showCustomer(cusid){
+    this.navCtrl.push(CustomerdetailPage, {id:cusid});
+  }
 }

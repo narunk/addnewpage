@@ -15,16 +15,20 @@ export class HomePage {
 
   }
   gotoMenu02(){
-    this.navCtrl.push(Menu02Page);}
+    this.navCtrl.push(Menu02Page);
+  //ทำลิงค์ไปยังหน้าเมนูอื่นนอกจาก HOME
+}
   gotoMenu01(){
-    this.navCtrl.push(Menu01Page);}
+    this.navCtrl.push(Menu01Page);
+  //หน้านี้จะใช้เรียกข้อมูลจาก Provider
+  }
   gotoMenu03(){
     this.navCtrl.push(Menu03Page);
 
   }
   gotoSlide(){
     this.navCtrl.push(SlidesPage);
-
+  //สร้าง imags Slides
   }
 
 }
