@@ -12,15 +12,18 @@
     <p>Welcom to my page</p>
   </div>
   <ion-list>
-    <ion-item>
+    <ion-item (click)="gotoMenu01()">
       <ion-icon name="contact"></ion-icon> Menu 001
     </ion-item>
     <ion-item (click)="gotoMenu02()">
       <ion-icon name="people"></ion-icon> Menu 002
     </ion-item>
-    <ion-item>
+    <ion-item (click)="gotoMenu03()">
       <ion-icon name="card"></ion-icon> Menu 003
     </ion-item>
+    <ion-item (click)="gotoSlide()">
+        <ion-icon name="camera"></ion-icon> SliedImag
+      </ion-item>
   </ion-list>
   
 </ion-content>
