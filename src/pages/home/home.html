@@ -1,14 +1,26 @@
 <ion-header>
   <ion-navbar>
     <ion-title>
-      Ionic Blank
+      My Home Page
     </ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
+  <div class="showhead">
+    <img src="assets/imgs/logo.png" alt="">
+    <p>Welcom to my page</p>
+  </div>
+  <ion-list>
+    <ion-item>
+      <ion-icon name="contact"></ion-icon> Menu 001
+    </ion-item>
+    <ion-item (click)="gotoMenu02()">
+      <ion-icon name="people"></ion-icon> Menu 002
+    </ion-item>
+    <ion-item>
+      <ion-icon name="card"></ion-icon> Menu 003
+    </ion-item>
+  </ion-list>
+  
 </ion-content>
